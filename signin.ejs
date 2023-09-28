@@ -1,0 +1,109 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Login Page with Bootstrap Example</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+  <style>
+    body {
+        background-image: url("https://img.freepik.com/free-photo/view-old-tree-lake-with-snow-covered-mountains-cloudy-day_181624-28954.jpg?w=996&t=st=1695751621~exp=1695752221~hmac=30d2df735bbb9bad3d65f4c1a89e40447ae8ca0dd3c3ec9c6c661cda13ea109f");
+        background-color: rgb(41, 174, 211);
+        font-family: Arial, sans-serif;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .pt-5 {
+        padding-top: 5%;
+    }
+    
+    .card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .card-body {
+        padding: 30px;
+    }
+    
+    .form-group.required label:after {
+        content: "*";
+        color: red;
+        margin-left: 5px;
+    }
+    
+    .btn-primary {
+        background-color: #007BFF;
+        border: none;
+    }
+    
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+    
+    .border-link {
+        border-bottom: 1px solid #007BFF;
+        color: #007BFF;
+        text-decoration: none;
+    }
+    
+    .border-link:hover {
+        border-bottom: 1px solid #0056b3;
+        color: #0056b3;
+    }
+    
+    .custom-checkbox .custom-control-label::before {
+        border: 1px solid #007BFF;
+    }
+    
+    .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+        border-color: #007BFF;
+        background-color: #007BFF;
+    }
+    
+    .custom-checkbox .custom-control-input:checked~.custom-control-label::after {
+        border-color: #007BFF;
+        background-color: #007BFF;
+    }
+  </style>
+</head>
+<body>
+    <div class="pt-5">
+        <h1 class="text-center">Login Form</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 mx-auto">
+                    <div class="card card-body">
+                        <form id="submitForm" action="/signinsubmit" method="get">
+                            <div class="form-group required">
+                                <label for="username">Email</label>
+                                <input type="text" class="form-control" id="email" required="" name="email" value="">
+                            </div>
+                            <div class="form-group required">
+                                <label class="d-flex flex-row align-items-center" for="password">Password 
+                                    <a class="ml-auto border-link small-xl" href="/forget-password">Forget Password</a>
+                                </label>
+                                <input type="password" class="form-control" required="" id="password" name="password" value="">
+                            </div>
+                            <div class="form-group mt-4 mb-4">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="remember-me" name="remember-me" data-parsley-multiple="remember-me">
+                                    <label class="custom-control-label" for="remember-me">Remember me?</label>
+                                </div>
+                            </div>
+                            <div class="form-group pt-1">
+                                <button class="btn btn-primary btn-block" type="submit">Log In</button>
+                            </div>
+                        </form>
+                        <p class="small-xl pt-3 text-center">
+                            <span class="text-muted">Not a member?</span>
+                            <a href="signup.html">Sign up</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
